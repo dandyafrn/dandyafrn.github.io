@@ -1,0 +1,145 @@
+---
+title: "Melihat Pengaruh Tingkat Inflasi Terhadap Tingkat Pengangguran"
+subtitle: "ANALISIS PENGARUH TINGKAT INFLASI NEGARA INDONESIA TERHADAP TINGKAT PENGANGGURAN TAHUN 2011-2021"
+author: "Muhammad Dandy Afriansyah"
+date: 2023-01-09
+number-sections: true
+format:
+  html: default
+  docx: default
+editor: visual
+---
+
+![](poltekapp.jpg){fig-align="center"}
+
+### Pendahuluan
+
+### Latar belakang
+
+Setiap negara memiiliki beberapa permasalahan dalam memajukan negara nya. Permasalahan tersebut timbul di beberapa aspek, seperti aspek kemanusiaan, aspek sosial, aspek politik, maupun aspek ekonomi. Aspek ekonomi memegang kendali sebagai aspek yang dianggap penting bagi suatu negara.
+
+Negara khususnya negara Indonesia memiliki permasalahan ekonomi dinilai akan mengalami kehancuran dalam kemajuan segala aspek lainnya. Sehingga dapat disimpulka bahwa aspek ekonomi memengaruhi segala aspek lainnya. Dalam permasalahan ekonomi yang dihadapi oleh beberapa negara, biasanya terdapat permasalahan tingkat inflasi dimana nilai mata uang mengalami penurunan yang signifikan dan permasalahan tingkat pengangguran.
+
+Memang benar, pengangguran umumnya timbul karena adanya beberapa faktor seperti rendahnya tingkat pendidikan dan strata ekonomi masyarakat. Akan tetapi, ada faktor lain yang dinilai juga memiliki pengaruh pada tingginya angka pengangguran yaitu tingkat inflasi.
+
+Dengan nilai mata uang negara yang merosot tajam, semua harga bahan-bahan pokok maupun barang lain akan melonjak tinggi. Akibatnya banyak perusahaan yang mengalami gulung tikar akibat tingginya tingkat inflasi negara Indonesia.
+
+### Ruang lingkup
+
+Ruang lingkup dan objek penelitian ini mencangkup dua variabel yakni tingkat inflasi dan tigkat pengangguran di Indonesia. Penelitian ini menggunakan metode regresi univariat atau Ordinary Least Square (OLS) dengan 1 variabel independen. Data yang dipakai adalah data sekunder yang telah dikumpulkan dari beberapa sumber data untuk dijadikan sebagai bahan penelitian. Penelitian ini fokus pada dampak keberadaan tingkat inflasi terhadap tingkat pengangguran.
+
+### Rumusan masalah
+
+1.  Bagaimana tingkat inflasi dapat berpengaruh terhadap angka pengangguran di Indonesia?
+
+### Tujuan dan manfaat penelitian
+
+Tujuan Penelitian:
+
+1.  Melihat seberapa besar pengaruh tingkat inflasi terhadap tingkat pengangguran di Indonesia
+
+Manfaat Penelitian:
+
+1.  Menjadikan penelitian ini sebagai suatu acuan untuk melihat seberapa besar pengaruh tingkat inflasi terhadap tingkat pengangguran di Indonesia.
+2.  Sebagai bahan evaluasi guna meminimalisir peningkatan angka pengangguran akibat melonjaknya angka inflasi.
+
+## Studi pustaka
+
+Sadono Sukirno(2002) menyebut inflasi adalah suatu proses kenaikan harga-harga yang berlaku dalam suatu perekonomian. Dalam Kamus Besar Bahasa Indonesia (KBBI), inflasi diartikan sebagai kemerosotan nilai uang (kertas) karena banyaknya dan cepatnya uang (kertas) beredar sehingga menyebabkan naiknya harga barang-barang.
+
+Yanuar (2009) pengangguran adalah keadaan di mana angkatan kerja yang ingin memperoleh pekerjaan tapi belum mendapatkannya. Menurut Kamus Besar Bahasa Indonesia (KBBI), pengangguran berasal dari kata anggur yang memiliki arti hal atau keadaan menganggur.
+
+Inflasi merupakan kenaikan harga barang dan jasa secara umum dan terus menerus dalam jangka waktu tertentu. Sementara itu, Pengangguran dapat diartikan sebagai sebagai suatu keadaan dimana seseorang tidak memiliki pekerjaan, sedang mencari pekerjaan, bekerja kurang dari dua hari selama seminggu, atau seseorang yang sedang berusaha mendapatkan pekerjaan yang layak.
+
+## Metode penelitian
+
+### Data
+
+| Tahun | Tingkat Inflasi | Tingkat Pengangguran |
+|-------|-----------------|----------------------|
+| 2011  | 3,79%           | 7,81%                |
+| 2012  | 4,30%           | 6,14%                |
+| 2013  | 8,38%           | 6,25%                |
+| 2014  | 8,36%           | 5,94%                |
+| 2015  | 3,35%           | 6,18%                |
+| 2016  | 3,02%           | 5,61%                |
+| 2017  | 3,61%           | 5,5%                 |
+| 2018  | 3,13%           | 5,24%                |
+| 2019  | 2,72%           | 5,18%                |
+| 2020  | 1,68%           | 7,07%                |
+| 2021  | 1,87%           | 6,49%                |
+
+penelitian ini menggunakan data xxx
+
+```{r}
+setwd("D:/Downloads/UAS METODO PENELITIAN DANDY (2)/UAS METODO PENELITIAN DANDY/UAS")
+library(readxl)
+dang<-read_excel("dandy.xlsx")
+plot(dang$X,dang$Y,xlab="TINGKAT INFLASI",ylab="TINGKAT PENGANGGURAN")
+abline(h=0)
+```
+
+```{r}
+setwd("D:/Downloads/UAS METODO PENELITIAN DANDY (2)/UAS METODO PENELITIAN DANDY/UAS")
+library(readxl)
+dang<-read_excel("dandy.xlsx")
+reg<-lm(X~Y,data=dang)
+dang$u<-resid(reg)
+plot(dang$X,dang$u,xlab="TINGKAT INFLASI",ylab="TINGKAT PENGANGGURAN")
+abline(h=0)
+```
+
+### Metode analisis
+
+Teknik analisis yang digunakan dalam penelitian ini adalah teknik kuantitatif dan penjabaran deskriptif. Teknik analisis kuantitatif merupakan analisis yang dilakukan dengan perhitungan angka-angka yang faktor yang mempengaruhi tingkat inflasi terhadap tingkat pengangguran. Metode yang dipilih adalah regresi univariat atau Ordinary Least Square (OLS) dengan 1 variabel independen. Penelitian ini merbaksud mencari hubungan antara nilai tukar dan nilai ekspor. Spesifikasi yang dilakukan adalah :
+
+$$
+y_{t}=\beta_0 + \beta_1 x_t+\mu_t
+$$ di mana $y_t$ adalah Tingkat inflasi dan $x_t$ adalah Tingkat Pengangguran.
+
+## Pembahasan
+
+### Pembahasan masalah
+
+| Variable  | Coeffisien | Std.Error | t-value |   prob   |
+|:---------:|:----------:|:---------:|:-------:|:--------:|
+| Intercept |   6.1965   |  0.5268   | 11.763  | 9.12e-07 |
+|     X     |  -0.0170   |  0.1152   | -0.147  |  0.886   |
+
+|        R-Square        | **0.002411** |
+|:----------------------:|:------------:|
+| **Adjusted R-Squared** |   -0.1084    |
+|    **F-Statistic**     |   0.02175    |
+| **Prob(F-statistik)**  |    0.886     |
+
+Pengaruh Tingkat Inflasi terhadap Tingkat Pengangguran.
+
+Tingkat inflasi tidak memiliki pengaruh terhadap tingkat pengangguran. Di tunjukan dengan dilihat dari probabilitis X (tingkat inflasi) yang tidak signifikan. Tingkat inflasi dinilai tidak memiliki pengaruh terhadap tingginya tingkat pengangguran. Dengan hasil ini berarti tingkat inflasi negara Indonesia tidak berpengaruh positif terhadap tingkat pengangguran negara Indonesia.
+
+### Analisis masalah
+
+```{r}
+setwd("D:/Downloads/UAS METODO PENELITIAN DANDY (2)/UAS METODO PENELITIAN DANDY/UAS")
+library(readxl)
+dang<-read_excel("dandy.xlsx")
+reg<-lm(Y~X,data=dang)
+summary(reg)
+```
+
+### Kesimpulan
+
+Pada penelitian kali ini dapat ditarik sebuah kesimpulan bahwa memang tingkat inflasi benar adanya memiliki kaitannya dengan tingkat pengangguran Indonesia. Akan tetapi, tingkat inflasi tidak berpengaruh signifikan terhadap tinggi atau rendahnya tingkat pengangguran di Indonesia. Hal ini didapatkan berdasarkan hasil olah data menggunakan metode kuantitatif dengan OLS.
+
+## Referensi
+
+Bola.com. (n.d.). *Pengertian Inflasi Menurut Para Ahli, Pahami Penyebab dan Cara Menanganinya*. bola.com. Retrieved January 20, 2023, from <https://www.bola.com/ragam/read/5060617/pengertian-inflasi-menurut-para-ahli-pahami-penyebab-dan-cara-menanganinya>
+
+*Badan Pusat Statistik*. (n.d.). Retrieved January 20, 2023, from <https://surabayakota.bps.go.id/indicator/6/86/1/tingkat-pengangguran-terbuka.html>
+
+*Contoh Ruang Lingkup Makalah, Karya Ilmiah, dan Laporan Kegiatan, Lengkap! -- Blog Mamikos*.
+(n.d.). Retrieved January 20, 2023, from <https://mamikos.com/info/contoh-ruang-lingkup-mhs/>
+
+*Pengangguran---Wikipedia bahasa Indonesia, ensiklopedia bebas*. (n.d.). Retrieved January 20, 2023, from <https://id.m.wikipedia.org/wiki/Pengangguran>
+
+egsaugm. (n.d.). *Apa itu Pengangguran? -- Environmental Geography Student Association*.
+Retrieved January 20, 2023, from <https://egsa.geo.ugm.ac.id/2019/09/29/apa-itu-pengangguran/>
